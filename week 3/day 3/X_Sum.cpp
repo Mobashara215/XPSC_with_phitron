@@ -1,13 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+ 
 long long solve()
 {
     long long n,m;
         cin>>n>>m;
         long long max_move=0;
         vector<vector<long long>> a(n,vector<long long>(m,0));
-
+ 
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 cin>>a[i][j];
@@ -17,7 +17,7 @@ long long solve()
             for(int j=0;j<m;j++){
                 long long count_s=0;
                 
-                crn_s+=a[i][j];
+                count_s+=a[i][j];
                 long long idx1=i-1,idx2=j-1;
                 while(idx1>=0 && idx2>=0){
                     count_s+=a[idx1][idx2];
@@ -27,7 +27,7 @@ long long solve()
                 idx1=i-1;
                 idx2=j+1;
                 while(idx1>=0 && idx2<m){
-                    crn_s+=a[idx1][idx2];
+                    count_s+=a[idx1][idx2];
                     idx1--;
                     idx2++;
                 }
@@ -52,7 +52,7 @@ long long solve()
         cout<<max_move<<endl;
         return 0;
 }
-
+ 
 int main()
 {
     
@@ -62,5 +62,5 @@ int main()
     {
         solve();
     }
-    return 0;
+return 0;
 }
