@@ -11,13 +11,14 @@ int main()
     {
         int n;  cin>>n;
         vector<string>s(n);
-        map<string,bool>mp;
+        map<string,bool>mp;//MAP(1,ABAB, 2,AB)
         for(int i=0;i<n;i++){
             cin>>s[i];
             mp[s[i]]=true;
         }
         string final="";
-
+        //ABAB
+        //AB
         for(int i=0;i<n;i++){
             bool f=false;
             for(int j=1;j<=s[i].size();j++){
