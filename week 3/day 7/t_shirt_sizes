@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int w()
+{
+	string p;
+	cin>>p;
+	char c=p[p.length()-1];
+	if(c=='M')return 0;
+	int b=p.length();
+	return c=='S'?-b:+b;
+}
+int main()
+{
+	
+	int T;
+	cin>>T;
+	for(;T--;)
+	{
+		int p=w();
+		int b=w();
+		cout<<(p<b?"<\n":p>b?">\n":"=\n");
+	}
+}
